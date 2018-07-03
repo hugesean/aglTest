@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { PetsService } from './shared/components/pets.service';
 
 import { AppComponent } from './app.component';
 
@@ -8,9 +10,10 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PetsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
